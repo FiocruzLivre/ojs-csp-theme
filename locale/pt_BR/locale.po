@@ -61,7 +61,8 @@ msgid "plugins.themes.csp.cookiesPolicy"
 msgstr "Este site usa cookies para garantir que você obtenha uma melhor experiência de navegação. <a rel=\"license\"  <a href=\"/ojs/index.php/csp/politica-cookies\">Saiba mais.</a>"
 
 msgid "plugins.themes.csp.login.announcement"
-msgstr "<b>Atenção!</b><br> Para acompanhamento de manuscritos submetidos até dezembro de 2024, clique <a href=\"https://cadernos.ensp.fiocruz.br/csp1/portal/saga.php\">aqui! </a>"
+msgstr "<b>Atenção!</b><br> Para acompanhamento de manuscritos submetidos até dezembro de 2024, utilize o"
+"<h3><a href=\"https://cadernos.ensp.fiocruz.br/csp1/portal/saga.php\">Acesso ao SAGAS. </a></h3>"
 
 msgid "plugins.themes.csp.login.announcement2"
-msgstr "Para novas submissões, utilize o login abaixo. <br> Caso já tenha cadastro no sistema SAGAS <b>utilize o mesmo login e senha.</b>"
+msgstr "<h3>Acesso ao OJS</h3>Para novas submissões, utilize o login abaixo. <br> Caso já tenha cadastro no sistema SAGAS <b>utilize o mesmo login e senha.</b><br>"
