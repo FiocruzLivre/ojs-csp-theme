@@ -15,7 +15,7 @@
 			<ul>
 				{foreach from=$interviews item=interview}
 					<li>
-						<a target="_blank" href="{url page="article" op="view" path=$interview->publication_id}">{$interview->setting_value}</a>
+						<a target="_blank" href="{url page="article" op="view" path=$interview['id']}">{$interview['title']}</a>
 					</li>
 				{/foreach}
 			</ul>

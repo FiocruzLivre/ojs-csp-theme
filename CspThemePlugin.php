@@ -75,14 +75,13 @@ class CspThemePlugin extends ThemePlugin {
 			// Seleção de entrevistas para exibir em sidebar
 			$issueDao = Repo::issue();
 			$currentIssue = $issueDao->getCurrent($context->getId());
-			$publicationsCollector = Repo::publication()->getCollector()
-            ->filterByContextIds([$context->getId()]);
-			$interviews = $publicationsCollector->getQueryBuilder()
-				->join('publication_settings AS p', 'p.publication_id', '=', 's.publication_id')
-				->where('s.setting_name', 'title')
-				->where('s.locale', 'pt')
-				->where('s.setting_value', 'ENTREVISTA')
-				->select('p.section_id, s.setting_value');
+			$publicationsCollector = Repo::submission()->getCollector()
+            ->filterByContextIds([$context->getId()])->filterBySectionIds([14])->orderBy('s.date_submitted')->limit(3)->getMany();
+			foreach ($publicationsCollector as $key => $value) {
+				$publication = Repo::publication()->get($value->getData('currentPublicationId'));
+				$arrayInterviews[] = array('title' => $publication->getLocalizedTitle(), 'id' =>  $publication->getId());
+			}
+			arsort($arrayInterviews);
 
 			if(!is_null($currentIssue)){
 				$coverImageUrl = $currentIssue->getLocalizedCoverImageUrl();
@@ -96,7 +95,7 @@ class CspThemePlugin extends ThemePlugin {
 				'coverImageAltText' => $coverImageAltText,
 				'context' => $context,
 				'op' => $op,
-				'interviews' => $interviews,
+				'interviews' => $arrayInterviews,
 				'navigationLocale' => $navigationLocale,
 			);
 		} else {
@@ -212,7 +211,7 @@ class CspThemePlugin extends ThemePlugin {
 				'coverImageAltText' => $coverImageAltText,
 				'context' => $context,
 				'op' => $op,
-				'interviews' => $interviews,
+				'interviews' => $arrayInterviews,
 				'citation' => $citation,
 				'navigationLocale' => $navigationLocale,
 				'dates' => $dates,
