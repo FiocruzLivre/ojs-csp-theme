@@ -5932,6 +5932,7 @@
 			  (this.ignoredParagraphElements = {
 				comment: !0,
 				"supplementary-material": !0,
+				"inline-supplementary-material": !0,
 				fig: !0,
 				"fig-group": !0,
 				"table-wrap": !0,
