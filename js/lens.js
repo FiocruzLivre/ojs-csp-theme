@@ -382,7 +382,7 @@
 					12: "Dezembro",
 				  }
 			  break;
-			case "es-ES":
+			case "es":
 				var r = {
 					1: "Enero",
 					2: "Febrero",
@@ -5137,7 +5137,7 @@
 							content:
 								navigationLanguage == "pt-BR"
 								? "Conflito de interesses"
-								: navigationLanguage == "es-ES"
+								: navigationLanguage == "es"
 								? "Conflicto de intereses"
 								: "Conflict of Interest",
 						  };
@@ -5203,7 +5203,7 @@
 							content:
 							navigationLanguage == "pt-BR"
 							? "Colaboradores"
-							: navigationLanguage == "es-ES"
+							: navigationLanguage == "es"
 							? "Colaboradores"
 							: "Contributors",
 						  };
@@ -5235,7 +5235,7 @@
 					content:
 					  language == "pt-BR"
 						? "Correspondência"
-						: language == "es-ES"
+						: language == "es"
 						? "Correspondencia"
 						: "Correspondence",
 				  };
@@ -5750,7 +5750,7 @@
 					level: 1,
 					content: language == "pt-BR"
 								? "Resumo"
-								: language == "es-ES"
+								: language == "es"
 								? "Resumen"
 								: "Abstract",
 				  };
@@ -7690,7 +7690,7 @@
 			  title:
 				language == "pt-BR"
 				  ? "Ilustrações"
-				  : language == "es-ES"
+				  : language == "es"
 				  ? "Ilustraciones"
 				  : "Illustrations",
 			  icon: "fa-picture-o",
@@ -7704,7 +7704,7 @@
 			  title:
 				language == "pt-BR"
 				  ? "Referências"
-				  : language == "es-ES"
+				  : language == "es"
 				  ? "Referencias"
 				  : "References",
 			  icon: "fa-link",
@@ -7725,7 +7725,7 @@
 			  title:
 				language == "pt-BR"
 				  ? "Informações"
-				  : language == "es-ES"
+				  : language == "es"
 				  ? "Información"
 				  : "Information",
 			  icon: "fa-info",
@@ -8358,7 +8358,7 @@
 				title:
 				  language == "pt-BR"
 					? "Conteúdo"
-					: language == "es-ES"
+					: language == "es"
 					? "Contenido"
 					: "Content",
 				icon: "fa-align-left",
