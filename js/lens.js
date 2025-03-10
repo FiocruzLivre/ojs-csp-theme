@@ -5743,12 +5743,16 @@
 			  (this["abstract"] = function(t, e, articleMeta) {
 				var n = t.doc,
 				  r = [],
-				  i = articleMeta.querySelector("title").textContent,
+				  language = document.getElementsByTagName('html')[0].getAttribute('xml:lang'),
 				  s = {
 					id: t.nextId("heading"),
 					type: "heading",
 					level: 1,
-					content: i.replace(':',''),
+					content: language == "pt-BR"
+								? "Resumo"
+								: language == "es-ES"
+								? "Resumen"
+								: "Abstract",
 				  };
 				n.create(s),
 				  r.push(s),
