@@ -160,7 +160,9 @@ class CspThemePlugin extends ThemePlugin {
 				unset($abbrev);
 			}
 			$issue = $args[0]->getTemplateVars('issue');
-			$citation = implode(", ",$authors).". ";
+			if($authors){
+				$citation = implode(", ",$authors).". ";
+			}
 			$citation .= $publication->getData('title',$publicationLocale).". ";
 			$citation .= $context->getLocalizedName()." ";
 			$citation .= $issue->getData('year')."; ";
