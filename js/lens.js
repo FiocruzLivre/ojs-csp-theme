@@ -5936,7 +5936,6 @@
 			  (this.ignoredParagraphElements = {
 				comment: !0,
 				"supplementary-material": !0,
-				"inline-supplementary-material": !0,
 				fig: !0,
 				"fig-group": !0,
 				"table-wrap": !0,
@@ -5956,6 +5955,7 @@
 			  (this.inlineParagraphElements = {
 				"inline-graphic": !0,
 				"inline-formula": !0,
+				"inline-supplementary-material": !0,
 			  }),
 			  (this.segmentParagraphElements = function(t) {
 				for (
@@ -6047,6 +6047,13 @@
 				  } else if ("inline-formula" === u) {
 					var f = this.formula(t, c, "inline");
 					f && s.push(f);
+				} else if ("inline-supplementary-material" === u) {
+					  d = {
+						id: t.nextId("text"),
+						type: "text",
+						content: c.textContent,
+					  };
+					n.create(d), s.push(d);
 				  }
 				}
 				return 0 === s.length
