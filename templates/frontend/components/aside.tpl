@@ -48,7 +48,7 @@
 	<div class="aside-container">
 		<div class="content-csp">
 		<a href="https://periodicos.fiocruz.br/pt-br" target="_blank">
-			<img src="{$baseUrl}/plugins/themes/csp/assets/portal-periodicos.jpg" />
+			<img src="{$baseUrl}/plugins/themes/csp/assets/portal-periodicos.png" />
 		</a>
 		</div>
 		<div class="content-csp">
