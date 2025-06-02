@@ -77,7 +77,7 @@
 					{if $currentContext->getSetting('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
-					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess}
+					{* {include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess} *}
 				{/foreach}
 			</div>
 		{/if}
