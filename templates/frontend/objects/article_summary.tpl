@@ -48,7 +48,8 @@
 				<div class="meta">
 					{if $showAuthor}
 						<div class="authors">
-							{$article->getCurrentPublication()->getAuthorString($authorUserGroups)|escape}
+							{assign var="stringsToRemove" value=["(Autor)", "(Autor/a)", "(Author)"]}
+							{str_replace($stringsToRemove,'',$article->getCurrentPublication()->getAuthorString($authorUserGroups))|escape}
 						</div> 
 					{/if}
 				</div>
