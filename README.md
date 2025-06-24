@@ -1,16 +1,17 @@
-# ojs-csp-theme
+# CSP Theme Plugin
 
-Template para o site do OJS (Open Journal Systems) do Cadenos de Saúde Pública da Fiocruz
+Plugin to customize the layout of Open Journal System (OJS) according to Cadernos de Saúde Pública da Fiocruz requirements.
 
-## Setup
 
-* Instale o tema Bootstrap 3
-* Clone este repositório dentro da pasta plugins da seguinte forma:
-```bash
-git clone git@github.com:LibreCodeCoop/ojs-csp-theme.git csp
-```
-> **OBS** é importante que o diretório onde o plugin é clonado se chame csp
+## Installation
 
-## Desenvolvimento
+**OJS version: 3.4.0**
 
-Abra o arquivo de configuração do OJS (`config.inc.php`) e certifique de que está com o cache desabilitado atribuindo `none` para `object_cache` e `Off` para `web_cache`
+> Requirements: You must have installed Bootstrap 3 plugin in the system
+
+- Clone this repo: ``git clone --branch ojs-3-4 https://github.com/FiocruzLivre/ojs-csp-theme.git csp`` inside the directory ``ojs/plugins/generic/
+``
+- Enable the plugin in _Website > Plugins_ area
+- Choose the theme in _Settings > Website > Theme_
+
+
