@@ -5161,12 +5161,13 @@
 					r.each(
 					  s,
 					  function(e) {
-						if (e.querySelector("label").textContent == "ERRATUM") {
+						var labelEl = e.querySelector("label");
+						if (labelEl && labelEl.textContent == "ERRATUM") {
 							var a = {
 								type: "heading",
 								id: t.nextId("heading"),
 								level: 3,
-								content: e.querySelector("label").textContent,
+								content: labelEl.textContent,
 							  };
 							i.create(a), n.push(a.id);
 							var c = this.bodyNodes(t, o.dom.getChildren(e), {
