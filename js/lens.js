@@ -5162,7 +5162,7 @@
 					  s,
 					  function(e) {
 						var labelEl = e.querySelector("label");
-						if (labelEl && labelEl.textContent == "ERRATUM") {
+						if (labelEl) {
 							var a = {
 								type: "heading",
 								id: t.nextId("heading"),
@@ -5170,13 +5170,13 @@
 								content: labelEl.textContent,
 							  };
 							i.create(a), n.push(a.id);
-							var c = this.bodyNodes(t, o.dom.getChildren(e), {
-							  ignore: ["label"],
-							});
-							r.each(c, function(t) {
-							  n.push(t.id);
-							});
 						}
+						var c = this.bodyNodes(t, o.dom.getChildren(e), {
+						  ignore: ["label"],
+						});
+						r.each(c, function(t) {
+						  n.push(t.id);
+						});
 					  },
 					  this
 					),
