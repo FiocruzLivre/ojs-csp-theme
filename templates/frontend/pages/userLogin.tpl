@@ -30,11 +30,6 @@ main{
 
 	<h1 class="namePage line">Acesso</h1>
 
-	<div class="alert alert-danger text-center">
-		<h4 style="line-height:2">
-			{translate key="plugins.themes.csp.login.announcement"}
-		</h4>
-	</div>
 	<div class="alert alert-info">
 		<h4 class="text-center" style="line-height:2">{translate key="plugins.themes.csp.login.announcement2"}</h4>
 		<br>
