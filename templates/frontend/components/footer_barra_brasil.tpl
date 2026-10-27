@@ -18,7 +18,7 @@
                 <span class="oculta">Página da Fundação Oswaldo Cruz</span>
             </a>
         </div>
-        {* <div class="logos-barra-brasil text-center col-md-2 col-xs-6">
+        <div class="logos-barra-brasil text-center col-md-2 col-xs-6">
             <a target="_blank" href="http://portalms.saude.gov.br/sistema-unico-de-saude/sistema-unico-de-saude">
                 <img style="height: 45px;" src="{$baseUrl}/plugins/themes/csp/assets/barra-brasil/footer/sus.png">
                 <span class="oculta">Página do Sistema Único de Saúde</span>
@@ -29,6 +29,6 @@
                 <img style="height: 70px;" src="{$baseUrl}/plugins/themes/csp/assets/barra-brasil/footer/governofederal.png">
                 <span class="oculta">Página do Governo Federal</span>
             </a>
-        </div> *}
+        </div>
     </div>
 </footer>
