@@ -10,11 +10,6 @@
 	</div>
 	<br>
 	{include file="frontend/components/social-media.tpl"}
-	{if $additionalHomeContent}
-		<div class="aside-container">
-			{$additionalHomeContent}
-		</div>
-	{/if}
 	<div class="aside-container">
 		<div class="aside-item">
 			<span>{translate|escape key="plugins.themes.csp.sidebar.interviews"}</span>
@@ -54,18 +49,11 @@
 			</iframe>
 		</div>
 	</div>
-	<div class="aside-container">
-		<div class="content-csp">
-		<a href="https://periodicos.fiocruz.br/pt-br" target="_blank">
-			<img src="{$baseUrl}/plugins/themes/csp/assets/portal-periodicos.png" />
-		</a>
+	{if $additionalHomeContent}
+		<div class="aside-container">
+			{$additionalHomeContent}
 		</div>
-		<div class="content-csp">
-		<a href="https://www.scielo.br/j/csp/"target="_blank">
-			<img src="{$baseUrl}/plugins/themes/csp/assets/scielo.svg" />
-		</a>
-		</div>
-	</div>
+	{/if}
 </div><!-- pkp_sidebar.left -->
 {/if}
 {if $page !== 'login'}
