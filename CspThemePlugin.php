@@ -207,7 +207,9 @@ class CspThemePlugin extends ThemePlugin {
 			$citation .= $context->getLocalizedName()." ";
 			$citation .= $issue->getData('year')."; ";
 			$citation .= $issue->getData('volume');
-			if($issue->getData('number')){
+			if($issue->getData('year') >= 2026 && preg_match('/suplemento\s*(\d+)/i', (string) $issue->getTitle('pt_BR'), $supplementMatch)){
+				$citation .= "(Supl. ".$supplementMatch[1].")";
+			}elseif($issue->getData('number') && $issue->getData('year') < 2026){
 				$citation .= "(".$issue->getData('number').")";
 			}
 			$doiObject = $publication->getData('doiObject');
