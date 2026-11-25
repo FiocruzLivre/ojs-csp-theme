@@ -5014,7 +5014,7 @@
 				  (o = o.concat(this.extractCorrespondence(t, e))),
 				  (o = o.concat(this.extractEditedBy(t, e, articleMeta, navigationLanguage))),
 				  (o = o.concat(this.extractContributions(t, e, articleMeta, navigationLanguage))),
-				  (o = o.concat(this.extractOthers(t, e, articleMeta))),
+				  (o = o.concat(this.extractOthers(t, e, article))),
 				  (o = o.concat(this.extractInterestsConflict(t, e, articleMeta, navigationLanguage))),
 				  (o = o.concat(this.extractAcknowledgements(t, e, article, navigationLanguage))),
 				  (o = o.concat(this.extractNotes(t, e))),
@@ -5151,10 +5151,11 @@
 				}
 				return n;
 			  }),
-			  (this.extractOthers = function(t, e) {
+			  (this.extractOthers = function(t, e, article) {
 				var n = [],
 				  i = t.doc,
-				  s = e.querySelectorAll("fn[fn-type=other]");
+				  backEl = article.querySelector("back"),
+				  s = backEl ? backEl.querySelectorAll("fn[fn-type=other]") : null;
 				return (
 				  s &&
 					s.length > 0 &&
